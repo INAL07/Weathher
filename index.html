@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   
+   
+    <div class="weather-widget">
+        <h1>Погода в Ростове-на-Дону</h1>
+        <div class="weather-info">
+            <div class="current-weather">
+                <h2>Текущая</h2>
+                <div class="weather-icon"  >
+                    <img id="weather-image" src="http://openweathermap.org/img/w/weather.current.icon.png" alt="">
+                </div>
+                <div class="temperature" id="current-temperature"></div>
+                <div class="description" id="current-weather-description"></div>
+                <div id="current-weather-icon"></div>
+            </div>
+            <div class="future-weather">
+                <h2>Будущая</h2>
+                <div class="future-days" id="future-days">
+                    <!--Data will come from JS side-->
+                </div>
+                <div class="average-temp">
+                    <div class="label">Средняя температура за сегодня:</div>
+                    <div class="value">{}&deg;C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html> 
