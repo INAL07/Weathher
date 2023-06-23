@@ -11,7 +11,7 @@ function getDayWidget(name, icon, temperature) {
     weatherIconContainer.className = "weather-icon"
 
     const image = document.createElement("img");
-    image.src = "https://openweathermap.org/img/wn/"+icon+ "@2x.png"
+    image.src = `https://openweathermap.org/img/wn/${icon}.png`;
     weatherIconContainer.appendChild(image)
 
     const tempDiv = document.createElement("div");
@@ -57,7 +57,7 @@ async function displayWeatherData() {
         const weatherData = await getWeatherData();
         const currentTemperature = Math.round(weatherData.list[0].main.temp);
         const currentWeatherDescription = weatherData.list[0].weather[0].description;
-        const currentWeatherIcon = "https://openweathermap.org/img/w/" + weatherData.list[0].weather[0].icon + ".png";
+        const currentWeatherIcon = `https://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}.png`;
         document.getElementById(
             "current-temperature"
         ).textContent = `${currentTemperature} °C`;
@@ -70,6 +70,8 @@ async function displayWeatherData() {
         const avgTemperature1 = calculateAvgTemperature(weatherData.list.slice(0, 8));
         const avgTemperature2 = calculateAvgTemperature(weatherData.list.slice(8, 16));
         const avgTemperature3 = calculateAvgTemperature(weatherData.list.slice(16, 24));
+        const avgTemperature = calculateAvgTemperature(weatherData.list.slice(0, 8));
+document.querySelector(".average-temp .value").textContent = `${avgTemperature}°C`;
 
         const futureDaysContainer = document.getElementById("future-days")
         futureDaysContainer.appendChild(getDayWidget("Завтра", "icon", avgTemperature1))

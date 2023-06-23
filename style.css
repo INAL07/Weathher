@@ -1,6 +1,7 @@
 .weather-widget {
     max-width: 400px;
     margin: 0 auto;
+    background: linear-gradient(to bottom, #52d4ff, #7bbdff);
     background-color: #f8f9fa;
     border: 1px solid #ced4da;
     border-radius: 5px;
@@ -18,6 +19,22 @@ h1, h2 {
     flex-direction: column;
     align-items: center;
 }
+
+h1 {
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px #ccc;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
 
 .weather-icon {
     margin-bottom: 10px;
@@ -65,3 +82,4 @@ h1, h2 {
 .value {
     font-size: 24px;
 }
+
