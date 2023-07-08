@@ -74,9 +74,9 @@ async function displayWeatherData() {
 document.querySelector(".average-temp .value").textContent = `${avgTemperature}°C`;
 
         const futureDaysContainer = document.getElementById("future-days")
-        futureDaysContainer.appendChild(getDayWidget("Завтра", "icon", avgTemperature1))
-        futureDaysContainer.appendChild(getDayWidget("Через 1 день", "icon", avgTemperature2))
-        futureDaysContainer.appendChild(getDayWidget("Через 2 дня", "icon", avgTemperature3))
+        futureDaysContainer.appendChild(getDayWidget("Завтра", weatherData.list[8].weather[0].icon, avgTemperature1))
+futureDaysContainer.appendChild(getDayWidget("Через 1 день", weatherData.list[16].weather[0].icon, avgTemperature2))
+futureDaysContainer.appendChild(getDayWidget("Через 2 дня", weatherData.list[24].weather[0].icon, avgTemperature3))
     } catch (error) {
         console.error('Error occurred while displaying weather data:', error);
         throw error;
